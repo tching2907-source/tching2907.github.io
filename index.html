@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <!-- TODO 1: COMPLETED - Added favicon and title -->
+        <title>CHING, Yat Long's Personal Website</title>
+        <link rel="icon" type="image/x-icon" href="assets/icons8-face-32.ico">
+    </head>
+    <body>
+        <nav>
+            <!-- TODO 2: COMPLETED - Added logo and name -->
+            <a href="./" id="logo">
+                <img src="assets/logo.svg" alt="Logo" />
+                CHING, Yat Long
+            </a>
+
+            <button id="anchor-list-trigger" onclick="toggleAnchorList()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentcolor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M 3 6 h 18 M 3 12 h 18 M 3 18 h 18" />
+                </svg>
+            </button>
+
+            <!-- TODO 3: Add the URL to your GitHub Pages repository -->
+            <ul id="anchor-list">
+                <li><a href="https://github.com/yourusername/your-repo" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+
+        <div id="section-container">
+            <section id="hero">
+                <!-- TODO 4: COMPLETED - Added h1 heading and description -->
+                <div>
+                    <h1>Hey, I'm CHING, Yat Long</h1>
+                    <p>UG of COMP 4900 (Fall 2025)</p>
+                </div>
+                <!-- TODO 4: COMPLETED - Added avatar -->
+                <img id="avatar" src="assets/avatar.jpg" alt="CHING, Yat Long's Avatar" />
+            </section>
+
+            <hr />
+
+            <section id="about">
+                <h2>About</h2>
+                <!-- TODO 5: COMPLETED - Short paragraph about you -->
+                <p>Hi there, I'm CHING, Yat Long, a Computer Science major at HKUST. I'm really interested in AI, web development and data science, and am always tinkering with new projects in my free time. Looking forward to collaborating and learning with everyone!</p>
+            </section>
+
+            <hr />
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <!-- TODO 6: Elaborate more skills using HTML elements -->
+                <div id="skill-set">
+                    <div class="skill">
+                        <img src="assets/icons8-html-100.svg" alt="HTML" />
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/icons8-css-100.svg" alt="CSS" />
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill">
+                        <img src="assets/icons8-c-48.svg" alt="C++" />
+                        <span>C++</span>
+                    </div>
+                    <!-- TODO 6: ADD MORE SKILLS HERE -->
+                    <!-- Example additional skills: -->
+                    <div class="skill">
+                        <img src="assets/icons8-python-100.svg" alt="Python" />
+                        <span>Python</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr />
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <!-- TODO 7: FIXED - Corrected HKUST email format -->
+                <p>ITSC: ylching@connect.ust.hk</p>
+                <p>Gmail: tching2907@gmail.com</p>
+            </section>
+        </div>
+
+        <footer>An assessment for COMP 4900 (Fall 2025)</footer>
+
+        <script>
+            function toggleAnchorList() {
+                const anchor_list = document.getElementById("anchor-list");
+                if (window.getComputedStyle(anchor_list).getPropertyValue("--show-anchor-list") == "none") {
+                    anchor_list.style.setProperty("--show-anchor-list", "block");
+                }
+                else {
+                    anchor_list.style.setProperty("--show-anchor-list", "none");
+                }
+            }
+        </script>
+        
+    </body>
+</html>
